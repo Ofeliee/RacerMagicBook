@@ -45,7 +45,7 @@ public class StockpileSpdPU : MonoBehaviour
 
 	IEnumerator applySpeed()
 	{
-		float tmpMult = stockpileArr [0];
+		float tmpMult = stockpileArr[0];
 		float tmpDur = durArr [0];
 		gameObject.GetComponent<Movement> ().thrustForce *= tmpMult;
 
@@ -84,7 +84,7 @@ public class StockpileSpdPU : MonoBehaviour
 	private void FixedUpdate()
 	{
 		
-		if(Input.GetKey("b") == true)
+		if(Input.GetKeyDown("b") == true)
 		{
 				if(isFull[0] == true)
 				{
