@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerSensor
   - Obstacle
+  - SpowerUp
   layers:
   - Default
   - TransparentFX

@@ -37,7 +37,7 @@ public class O_powerUp : MonoBehaviour
         Movement acc = player.GetComponent<Movement>();
         //Apply effect to the player
 		if (type == 0) {
-			acc.thrustForce *= multiplier;
+			//acc.thrustForce *= multiplier;
 		} else if ((type == 1) && (player.GetComponent<sCollisionScript> ().hitCount != 0)) {
 			player.GetComponent<sCollisionScript> ().hitCount -= 1;
 
@@ -70,7 +70,7 @@ public class O_powerUp : MonoBehaviour
         //reverse effect on our player
 		if (type == 0) 
 		{
-			acc.thrustForce /= multiplier;
+			//acc.thrustForce /= multiplier;
 		} 
 		else if (type == 2) 
 		{
