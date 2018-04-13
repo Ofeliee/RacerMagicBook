@@ -9,10 +9,10 @@ public class O_powerUp : MonoBehaviour
     public int type = 0;
     public float duration = 4f;
     public Material normalMat;
-    private GameObject clone;
+	public float multiplier = 3f;
+	public GameObject timeRef;
 
-
-    public float multiplier = 3f;
+	private GameObject clone;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -46,9 +46,14 @@ public class O_powerUp : MonoBehaviour
 			} else if (player.GetComponent<sCollisionScript> ().hitCount == 1) {
 				player.GetComponentInChildren<MeshRenderer> ().material = player.GetComponent<sCollisionScript> ().newMaterialref;
 			}
-		} else if (type == 2) 
+		} 
+		else if (type == 2) 
 		{
 			acc.thrustForce /= multiplier;
+		}
+		else if (type == 3)
+		{
+			timeRef.GetComponent<CountDownTimer>().timer -= multiplier;
 		}
 
         //wait x amount of seconds
