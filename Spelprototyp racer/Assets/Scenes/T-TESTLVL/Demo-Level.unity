@@ -907,7 +907,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.29
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2312,7 +2312,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 96
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -2336,8 +2336,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 730206760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.008569175, y: -0.7070545, z: 0.008569167, w: 0.7070552}
+  m_LocalPosition: {x: 760, y: 3.24, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3228,7 +3228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.29
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3663,7 +3663,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.29
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5403,21 +5403,9 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1953318931}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32ef7420ac00257448150eac0edb42f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
---- !u!114 &1953318933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1953318931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d10200d5b42666458f41208f74029f3, type: 3}
+  m_Script: {fileID: 11500000, guid: e34d6d94486146c469785e438ffe1416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1987442155

@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class TheSelectedBook : MonoBehaviour {
 
+    private GameObject[] lvlCharacterList;
 
 	// Use this for initialization
 	void Start ()
     {
-        var fin = GameObject.Find("CharacterList");
-        gameObject.GetComponent<CharacterSelection>().index = fin.GetComponent<CharacterSelection>().index;
-        gameObject.GetComponent<CharacterSelection>().SelectedBook();
 
+        int index = PlayerPrefs.GetInt("CharacterSelected");
 
+        lvlCharacterList = new GameObject[transform.childCount];
 
+        //Fill the array with the models 
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            lvlCharacterList[i] = transform.GetChild(i).gameObject;
+        }
+
+        // toggle off their renderer 
+        foreach (GameObject go in lvlCharacterList)
+        {
+            go.SetActive(false);
+        }
+
+        //Toggle in the first //selected character
+        if (lvlCharacterList[index])
+        {
+            lvlCharacterList[index].SetActive(true);
+        }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
