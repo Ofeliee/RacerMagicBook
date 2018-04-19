@@ -5,7 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     //GameManager holds a public static reference to itself.
     //Therefore it is an "singleton" which allows it to be accessed from
@@ -41,12 +42,14 @@ public class GameManager : MonoBehaviour {
         raceStarted = true;
     }
     // Update is called once per frame
-    void Update () {
-		
-	}
+    void Update()
+    {
+
+    }
 
     public bool gameActive()
     {
         return raceStarted && !isGameOver;
     }
+
 }
