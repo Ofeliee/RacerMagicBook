@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/T-TESTLVL/MainMenu.unity
     guid: cda99e07f23f79d40b42db90c4eb82e5
   - enabled: 1
+    path: Assets/Scenes/T-TESTLVL/Demo-Level.unity
+    guid: f9c4d4fe3378976488be4ae7a5feaeac
+  - enabled: 1
     path: Assets/Scenes/O_TestStuff/O_empty.unity
     guid: d33adeb0b5c26b94aa0c77e261c62dc6
