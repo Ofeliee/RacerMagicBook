@@ -71,6 +71,6 @@ public class CharacterSelection : MonoBehaviour {
     {
         PlayerPrefs.SetInt("CharacterSelected", index);
 
-        SceneManager.LoadScene("O_empty");
+        SceneManager.LoadScene("Demo-Level");
     }
 }
