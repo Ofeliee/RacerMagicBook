@@ -716,9 +716,47 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114980366097787896, guid: 1d3c229c5944f7349a76b8d42a7ddaf2,
+        type: 2}
+      propertyPath: shipBody
+      value: 
+      objectReference: {fileID: 2088823811}
+    - target: {fileID: 1853425492062052, guid: 1d3c229c5944f7349a76b8d42a7ddaf2, type: 2}
+      propertyPath: m_Name
+      value: LvlCharacterList
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114291357351495148, guid: 1d3c229c5944f7349a76b8d42a7ddaf2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1d3c229c5944f7349a76b8d42a7ddaf2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1953318931 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1853425492062052, guid: 1d3c229c5944f7349a76b8d42a7ddaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1953318930}
+--- !u!114 &1953318932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953318931}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ef7420ac00257448150eac0edb42f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+--- !u!114 &1953318933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953318931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d10200d5b42666458f41208f74029f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2068364585
 Prefab:
   m_ObjectHideFlags: 0
@@ -789,3 +827,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 449298db61d87274985919e0524add29, type: 3}
   m_IsPrefabParent: 0
+--- !u!4 &2088823811 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4457257823574736, guid: 1d3c229c5944f7349a76b8d42a7ddaf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1953318930}

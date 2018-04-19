@@ -193,8 +193,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45288750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15273371, y: 0.71868104, z: -8.774602}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.15273, y: -0.38, z: -8.774602}
+  m_LocalScale: {x: 2.2160423, y: 2.216043, z: 2.216043}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 956391825}
+      - m_Target: {fileID: 956391827}
         m_MethodName: ToggleLeft
         m_Mode: 1
         m_Arguments:
@@ -609,6 +609,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68d21d44f804c9c4b93b8b018dbf4dba, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &609037686 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 68d21d44f804c9c4b93b8b018dbf4dba, type: 3}
+  m_PrefabInternal: {fileID: 433422425}
+--- !u!114 &609037687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609037686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6afd05ad85f604093ede76693af6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 15
+  amplitude: 0.1
+  frequency: 1
 --- !u!1 &645712889
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +763,8 @@ GameObject:
   m_Component:
   - component: {fileID: 956391826}
   - component: {fileID: 956391825}
+  - component: {fileID: 956391827}
+  - component: {fileID: 956391828}
   m_Layer: 0
   m_Name: CharacterList
   m_TagString: Untagged
@@ -778,6 +798,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956391827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956391824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ef7420ac00257448150eac0edb42f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &956391828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956391824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb809bb33b1ae4545b0f806c6efa4563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1157445239
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +896,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 956391825}
+      - m_Target: {fileID: 956391827}
         m_MethodName: ToggleRight
         m_Mode: 1
         m_Arguments:
@@ -1124,7 +1166,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 956391825}
+      - m_Target: {fileID: 956391827}
         m_MethodName: Confirmbutton
         m_Mode: 1
         m_Arguments:
@@ -1170,6 +1212,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1575354501}
+--- !u!1 &1736172100 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: ec289fe4bffadba4da0080d38a8084e3, type: 3}
+  m_PrefabInternal: {fileID: 338443917}
+--- !u!114 &1736172101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736172100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6afd05ad85f604093ede76693af6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: -15
+  amplitude: 0.1
+  frequency: 1
 --- !u!1 &1812500269
 GameObject:
   m_ObjectHideFlags: 0

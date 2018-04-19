@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterSelection : MonoBehaviour {
 
     private GameObject[] characterList;
-    private int index;
-
+    public int index;
 
     private void Start()
     {
@@ -15,30 +14,19 @@ public class CharacterSelection : MonoBehaviour {
 
         characterList = new GameObject[transform.childCount];
 
-
         //Fill the array with the models 
-        for(int i = 0; i < transform.childCount; i++ )
+        for (int i = 0; i < transform.childCount; i++ )
         {
             characterList[i] = transform.GetChild(i).gameObject;
         }
-
-        // toggle off their renderer 
-        foreach(GameObject go in characterList)
-        {
-            go.SetActive(false);
-        }
-
-        //Toggle in the first //selected character
-        if(characterList[index])
-        {
-            characterList[index].SetActive(true);
-        }
-
     }
+
     public void ToggleLeft()
     {
         //togge off the current model 
-        characterList[index].SetActive(false);
+        //characterList[index].SetActive(false);
+
+        characterList[index].GetComponent<Floating>().amplitude = 0.1f;
 
         index--;
 
@@ -48,13 +36,17 @@ public class CharacterSelection : MonoBehaviour {
         }
 
         //toggle on the next model 
-        characterList[index].SetActive(true);
+        //characterList[index].SetActive(true);
+
+        characterList[index].GetComponent<Floating>().amplitude = 0.3f;
     }
 
     public void ToggleRight()
     {
         //togge off the current model 
-        characterList[index].SetActive(false);
+        //characterList[index].SetActive(false);
+
+        characterList[index].GetComponent<Floating>().amplitude = 0.1f;
 
         index++;
 
@@ -64,8 +56,27 @@ public class CharacterSelection : MonoBehaviour {
         }
 
         //toggle on the next model 
-        characterList[index].SetActive(true);
+        //characterList[index].SetActive(true);
+
+        characterList[index].GetComponent<Floating>().amplitude = 0.3f;
+
     }
+
+    public void SelectedBook()
+    {
+        // toggle off their renderer 
+        foreach (GameObject go in characterList)
+        {
+            go.SetActive(false);
+        }
+
+        //Toggle in the first //selected character
+        if (characterList[index])
+        {
+            characterList[index].SetActive(true);
+        }
+    }
+
 
     public void Confirmbutton()
     {
