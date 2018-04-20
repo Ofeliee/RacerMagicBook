@@ -84,4 +84,5 @@ public class CharacterSelection : MonoBehaviour {
 
         SceneManager.LoadScene("Demo-Level");
     }
+  
 }

@@ -17,7 +17,7 @@ public class GameOverManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameTimer.timer <= 0)
+		if (gameTimer.timer == 200)
         {
             anim.SetTrigger("GameOver");
             restartTimer += Time.deltaTime;
