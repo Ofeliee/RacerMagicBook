@@ -8,7 +8,7 @@ public class O_powerUp : MonoBehaviour
     //public PlayerStats stat;
     public int type = 0;
     public float duration = 4f;
-    public Material normalMat;
+    //public Material normalMat;
 	public float multiplier = 3f;
 	public GameObject timeRef;
 
@@ -41,9 +41,12 @@ public class O_powerUp : MonoBehaviour
 		} else if ((type == 1) && (player.GetComponent<sCollisionScript> ().hitCount != 0)) {
 			player.GetComponent<sCollisionScript> ().hitCount -= 1;
 
-			if (player.GetComponent<sCollisionScript> ().hitCount == 0) {
-				player.GetComponentInChildren<MeshRenderer> ().material = normalMat;
-			} else if (player.GetComponent<sCollisionScript> ().hitCount == 1) {
+			if (player.GetComponent<sCollisionScript> ().hitCount == 0) 
+			{
+				player.GetComponentInChildren<MeshRenderer> ().material = player.GetComponent<sCollisionScript>().normalMat;
+			} 
+			else if (player.GetComponent<sCollisionScript> ().hitCount == 1) 
+			{
 				player.GetComponentInChildren<MeshRenderer> ().material = player.GetComponent<sCollisionScript> ().newMaterialref;
 			}
 		} 

@@ -7,19 +7,28 @@ public class sCollisionScript : MonoBehaviour
     public float hitCount = 0;
     public Material newMaterialref;
     public Material sMaterialref;
+	public Material normalMat;
     public Renderer refRend;
 
 	public float count = 4f;
 	private float timer = 0.0f;
 	private Color inv;
 	private bool invun = false;
+	bool firstCol= true;
 
 	void Start()
 	{
+		firstCol = true;
 		inv = refRend.material.color;
 	}
     private void OnCollisionEnter(Collision collisionInfo)
     {
+		if (firstCol == true) 
+		{
+			normalMat = gameObject.GetComponentInChildren<MeshRenderer> ().material;
+			refRend = gameObject.GetComponentInChildren<Renderer>();
+			firstCol = false;
+		}
         Debug.Log(collisionInfo.collider.name);
 
 		if (timer < 0) 
