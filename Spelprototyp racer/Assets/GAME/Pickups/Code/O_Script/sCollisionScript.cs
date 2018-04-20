@@ -48,7 +48,7 @@ public class sCollisionScript : MonoBehaviour
 				} 
 				else if (hitCount == 3) 
 				{
-					Destroy (gameObject);
+					//Destroy (gameObject);
 				}
 				timer = count;
 				inv = refRend.material.color;

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour {
 
     public CountDownTimer gameTimer;
+    public GameObject playerCube;
     public float restartDelay = 5f;
 
     Animator anim;
@@ -20,9 +21,22 @@ public class GameOverManager : MonoBehaviour {
         {
             anim.SetTrigger("GameOver");
             restartTimer += Time.deltaTime;
+            Destroy(playerCube);
 
             if (restartTimer >= restartDelay)
             {
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
+
+        if (playerCube.GetComponent<sCollisionScript>().hitCount >= 3)
+        {
+            anim.SetTrigger("GameOverDeath");
+            restartTimer += Time.deltaTime;
+
+            if (restartTimer >= restartDelay)
+            {
+                Destroy(playerCube);
                 SceneManager.LoadScene("MainMenu");
             }
         }
