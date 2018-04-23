@@ -10,6 +10,8 @@ public class sCollisionScript : MonoBehaviour
 	public Material normalMat;
     public Renderer refRend;
 
+	public bool respawning = false;
+
 	public float count = 4f;
 	private float timer = 0.0f;
 	private Color inv;
@@ -48,6 +50,8 @@ public class sCollisionScript : MonoBehaviour
 				} 
 				else if (hitCount == 3) 
 				{
+					respawning = true;
+					gameObject.GetComponent<O_RespawnScript> ().Respawn ();
 					//Destroy (gameObject);
 				}
 				timer = count;

@@ -12,6 +12,7 @@ public class StockpileSpdPU : MonoBehaviour
 	private bool[] isFull = {false,false,false};
 	private O_powerUp pRef;
 	private bool isPowered = false;
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if(other.CompareTag("SpowerUp"))
@@ -79,9 +80,12 @@ public class StockpileSpdPU : MonoBehaviour
 		}
 
 		yield return new WaitForSeconds (tmpDur);
-
-		gameObject.GetComponent<Movement> ().thrustForce /= tmpMult;
-		isPowered = false;
+		if (gameObject.GetComponent<sCollisionScript> ().respawning == false) 
+		{
+			gameObject.GetComponent<Movement> ().thrustForce /= tmpMult;
+			isPowered = false;
+		}
+		gameObject.GetComponent<sCollisionScript> ().respawning = false;
 	}
 
 	private void FixedUpdate()
@@ -89,11 +93,23 @@ public class StockpileSpdPU : MonoBehaviour
 		
 		if((Input.GetKeyDown("b") == true) && (isPowered == false))
 		{
-				if(isFull[0] == true)
+			if(isFull[0] == true)
 				{
 				StartCoroutine (applySpeed ());
 				}
 		}
+	}
+
+	public void Reset()
+	{
+		for(int i=0; i< 3; i++)
+		{
+			stockpileArr[i] = 0.0f;
+			durArr[i] = 0.0f;
+			isFull [i] = false;
+		}
+		arrIsFull = false;
+		isPowered = false;
 	}
 
 }	
