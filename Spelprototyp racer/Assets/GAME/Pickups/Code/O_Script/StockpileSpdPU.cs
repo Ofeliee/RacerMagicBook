@@ -11,6 +11,7 @@ public class StockpileSpdPU : MonoBehaviour
 	private bool arrIsFull = false;
 	private bool[] isFull = {false,false,false};
 	private O_powerUp pRef;
+	private bool isPowered = false;
 	private void OnTriggerEnter(Collider other)
 	{
 		if(other.CompareTag("SpowerUp"))
@@ -48,6 +49,7 @@ public class StockpileSpdPU : MonoBehaviour
 		float tmpMult = stockpileArr[0];
 		float tmpDur = durArr [0];
 		gameObject.GetComponent<Movement> ().thrustForce *= tmpMult;
+		isPowered = true;
 
 		arrIsFull = false;
 		stockpileArr [0] = stockpileArr [1];
@@ -79,12 +81,13 @@ public class StockpileSpdPU : MonoBehaviour
 		yield return new WaitForSeconds (tmpDur);
 
 		gameObject.GetComponent<Movement> ().thrustForce /= tmpMult;
+		isPowered = false;
 	}
 
 	private void FixedUpdate()
 	{
 		
-		if(Input.GetKeyDown("b") == true)
+		if((Input.GetKeyDown("b") == true) && (isPowered == false))
 		{
 				if(isFull[0] == true)
 				{
