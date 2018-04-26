@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Test.Test2 { }
 public class sCollisionScript : MonoBehaviour
 {
     public float hitCount = 0;

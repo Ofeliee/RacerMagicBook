@@ -6,6 +6,7 @@ public class GameOverManager : MonoBehaviour {
     public CountDownTimer gameTimer;
     public GameObject playerCube;
     public float restartDelay = 5f;
+    public float shadowCatchTime = 20f;
 
     Animator anim;
     float restartTimer;
@@ -17,16 +18,21 @@ public class GameOverManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameTimer.timer == 200)
+		if (gameTimer.timer <= 0)
         {
             anim.SetTrigger("GameOver");
             restartTimer += Time.deltaTime;
-            Destroy(playerCube);
+            //Destroy(playerCube);
 
             if (restartTimer >= restartDelay)
             {
                 SceneManager.LoadScene("MainMenu");
             }
+        }
+
+        if (gameTimer.timer == 20)
+        {
+            anim.SetTrigger("ShadowCatch");
         }
 
         if (playerCube.GetComponent<sCollisionScript>().hitCount >= 3)
