@@ -7,6 +7,7 @@ TagManager:
   - PlayerSensor
   - Obstacle
   - SpowerUp
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
