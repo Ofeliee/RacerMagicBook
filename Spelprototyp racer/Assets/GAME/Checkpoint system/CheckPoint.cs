@@ -4,38 +4,29 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour {
 
-    public int index = -1;
+    public int cPassed = 0;
     Vector3 currentPos;
+    Quaternion currentRot;
     public GameObject reefref;
 
     private void OnTriggerEnter(Collider other)
     {
         //Get the checkpoint element in the list. and put the the element nr in index
-        if (other.gameObject == reefref.GetComponent<CheckList>().checkpoints[index + 1])
+        if (other.CompareTag("Checkpoint"))
         {
-            index += 1;
-            //if ((index > reefref.GetComponent<CheckList>().currentCheckpoint) && (index == reefref.GetComponent<CheckList>().currentCheckpoint + 1))
-           // {
-                if (other.CompareTag("Checkpoint"))
+                if (other.gameObject.GetComponent<Index>().index == cPassed)
                 {
                     // Gets the checkpoints location and increase current checkpoint by 1 
                     GetLocation(other);
-                    reefref.GetComponent<CheckList>().currentCheckpoint += 1;
-
+                    cPassed += 1;
                     print("HIT");
-                
-                    //if(reefref.GetComponent<CheckList>().nrOfCheckpoints == index + 1)
-                    //{
-                    //    index = -1; 
-                    //}
                 }
-
-            //}
         }
 
     }
-    private void GetLocation(Collider player)
+    private void GetLocation(Collider checkpoint)
     {
-        currentPos = transform.position;
+        currentPos = checkpoint.GetComponent<Transform>().position;
+        currentRot = checkpoint.GetComponent<Transform>().rotation;
     }
 }

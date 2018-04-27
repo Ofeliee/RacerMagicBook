@@ -30,7 +30,16 @@ public class CheckList : MonoBehaviour {
             checkpoints.Add(arr[i]);
         }
 
-	}
+        for (int i = 0; i < nrOfCheckpoints; i++)
+        {
+            if(i != checkpoints[i].GetComponent<Index>().index)
+            {
+                checkpoints.Insert(checkpoints[i].GetComponent<Index>().index, checkpoints[i]);
+                checkpoints.RemoveAt(i);
+            }
+        }
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
