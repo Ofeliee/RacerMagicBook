@@ -11,21 +11,29 @@ public class CheckPoint : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         //Get the checkpoint element in the list. and put the the element nr in index
-        index += 1; 
-
-        if((index > reefref.GetComponent<CheckList>().currentCheckpoint))
+        if (other.gameObject == reefref.GetComponent<CheckList>().checkpoints[index + 1])
         {
-            if(other.CompareTag("Checkpoint"))
-            {
-                Debug.Log("Hit!");
-                // Gets the checkpoints location and increase current checkpoint by 1 
-                GetLocation(other);
-                reefref.GetComponent<CheckList>().currentCheckpoint += 1; 
-            }
+            index += 1;
+            //if ((index > reefref.GetComponent<CheckList>().currentCheckpoint) && (index == reefref.GetComponent<CheckList>().currentCheckpoint + 1))
+           // {
+                if (other.CompareTag("Checkpoint"))
+                {
+                    // Gets the checkpoints location and increase current checkpoint by 1 
+                    GetLocation(other);
+                    reefref.GetComponent<CheckList>().currentCheckpoint += 1;
+
+                    print("HIT");
+                
+                    //if(reefref.GetComponent<CheckList>().nrOfCheckpoints == index + 1)
+                    //{
+                    //    index = -1; 
+                    //}
+                }
+
+            //}
         }
 
     }
-
     private void GetLocation(Collider player)
     {
         currentPos = transform.position;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckList : MonoBehaviour {
 
-    int nrOfCheckpoints = 0;
+    public int nrOfCheckpoints = 0;
     public int currentCheckpoint = 0;
     public int currentLap;
     public Vector3 startPos;
@@ -23,6 +23,7 @@ public class CheckList : MonoBehaviour {
         // Find all checkpoint gameobjects, placed in arr and then over to List.
         arr = GameObject.FindGameObjectsWithTag("Checkpoint");
         nrOfCheckpoints = arr.Length;
+        print(nrOfCheckpoints);
 
         for (int i = 0; i < nrOfCheckpoints; i++)
         {
