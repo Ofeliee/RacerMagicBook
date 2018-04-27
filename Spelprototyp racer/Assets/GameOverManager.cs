@@ -18,15 +18,18 @@ public class GameOverManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameTimer.timer <= 0)
+		if (gameTimer.timer <= 10)
         {
             anim.SetTrigger("GameOver");
-            restartTimer += Time.deltaTime;
             //Destroy(playerCube);
 
-            if (restartTimer >= restartDelay)
+            if(gameTimer.timer <= 0)
             {
-                SceneManager.LoadScene("MainMenu");
+                restartTimer += Time.deltaTime;
+                if (restartTimer >= restartDelay)
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
             }
         }
 
