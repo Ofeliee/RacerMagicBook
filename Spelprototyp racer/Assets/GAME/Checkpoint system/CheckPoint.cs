@@ -12,7 +12,7 @@ public class CheckPoint : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         //Get the checkpoint element in the list. and put the the element nr in index
-        if (other.CompareTag("Checkpoint"))
+        if (other.CompareTag("CheckPoint"))
         {
                 if (other.gameObject.GetComponent<Index>().index == cPassed)
                 {
