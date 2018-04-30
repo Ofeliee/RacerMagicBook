@@ -21,7 +21,7 @@ public class CheckList : MonoBehaviour {
         currentLap = 0;
 
         // Find all checkpoint gameobjects, placed in arr and then over to List.
-        arr = GameObject.FindGameObjectsWithTag("Checkpoint");
+        arr = GameObject.FindGameObjectsWithTag("CheckPoint");
         nrOfCheckpoints = arr.Length;
         print(nrOfCheckpoints);
 
@@ -45,5 +45,6 @@ public class CheckList : MonoBehaviour {
 	void Update () {
 
         //lap = currentLap;
+
 	}
 }
