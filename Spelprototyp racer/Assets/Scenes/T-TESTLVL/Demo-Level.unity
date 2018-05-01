@@ -602,7 +602,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cPassed: 0
-  reefref: {fileID: 0}
+  currentPos: {x: 0, y: 0, z: 0}
+  currentRot: {x: 0, y: 0, z: 0, w: 0}
+  listHolder: {fileID: 1804533127}
 --- !u!1001 &82240701
 Prefab:
   m_ObjectHideFlags: 0
@@ -986,7 +988,7 @@ GameObject:
   - component: {fileID: 180450268}
   m_Layer: 0
   m_Name: Checkpoint (1)
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1085,7 @@ GameObject:
   - component: {fileID: 184942782}
   m_Layer: 0
   m_Name: LapCheckPoint  (1)
-  m_TagString: CheckPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2984,7 +2986,7 @@ GameObject:
   - component: {fileID: 631317823}
   m_Layer: 0
   m_Name: Checkpoint (3)
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3511,7 +3513,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 96
+  field of view: 40
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -3535,8 +3537,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 730206760}
-  m_LocalRotation: {x: 0.008569194, y: -0.707053, z: 0.008569148, w: 0.7070567}
-  m_LocalPosition: {x: 760, y: 3.24, z: 18}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4799,7 +4801,7 @@ GameObject:
   - component: {fileID: 1305981900}
   m_Layer: 9
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6579,6 +6581,7 @@ MonoBehaviour:
   currentLap: 0
   startPos: {x: 0, y: 0, z: 0}
   lap: 0
+  firstCheck: {fileID: 0}
   checkpoints: []
 --- !u!4 &1804533129 stripped
 Transform:
@@ -6614,6 +6617,7 @@ MonoBehaviour:
   currentLap: 0
   startPos: {x: 0, y: 0, z: 0}
   lap: 0
+  firstCheck: {fileID: 180450267}
   checkpoints: []
 --- !u!1001 &1809743655
 Prefab:
@@ -6727,7 +6731,7 @@ GameObject:
   - component: {fileID: 1847351375}
   m_Layer: 0
   m_Name: Checkpoint (4)
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

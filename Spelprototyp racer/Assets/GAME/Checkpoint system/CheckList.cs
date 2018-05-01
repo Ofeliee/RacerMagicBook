@@ -10,6 +10,7 @@ public class CheckList : MonoBehaviour {
     public Vector3 startPos;
     public int lap;
     private GameObject[] arr;
+	public GameObject firstCheck;
     public List<GameObject> checkpoints = new List<GameObject>();
 
     // Use this for initialization
@@ -31,17 +32,18 @@ public class CheckList : MonoBehaviour {
             checkpoints.Add(arr[i]);
         }
 
+		//Ensure that the first object in the list is the first checkpoint.
+		//This is a requirement for listCorrect
         for (int i = 0; i < nrOfCheckpoints; i++)
         {
-            if(0 == checkpoints[i].GetComponent<Index>().index)
+			if(firstCheck == checkpoints[i])
             {
-				GameObject tmp;
-				tmp = checkpoints [i];
 				checkpoints.RemoveAt(i);
-                checkpoints.Insert(tmp.GetComponent<Index>().index, tmp);
+				checkpoints.Insert(0, firstCheck);
             }
         }
 
+		//Orders the checkpoints correctly in the list as long as the closest checkpoint is the next one.
 		listCorrect (checkpoints);
 
 		for (int i = 0; i < nrOfCheckpoints; i++)
@@ -81,7 +83,6 @@ public class CheckList : MonoBehaviour {
 					tmp = checkList [nextCheckpoint];
 					checkList.RemoveAt (nextCheckpoint);
 					checkList.Insert(i+1,tmp);
-					checkList [i+1].GetComponent<Index> ().index = (i+1);
 				}
 			}
 		}

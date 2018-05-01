@@ -113,6 +113,90 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &6424591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 6424595}
+  - component: {fileID: 6424594}
+  - component: {fileID: 6424593}
+  - component: {fileID: 6424592}
+  m_Layer: 0
+  m_Name: Gate2 (5)
+  m_TagString: Checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &6424592
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6424591}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &6424593
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6424591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &6424594
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6424591}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &6424595
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6424591}
+  m_LocalRotation: {x: -0, y: -0.3777633, z: -0, w: 0.92590225}
+  m_LocalPosition: {x: 4.01, y: 0.86, z: -8.23}
+  m_LocalScale: {x: 0.2723607, y: 1, z: 4.189758}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: -44.390003, z: 0}
 --- !u!1 &72193920
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +208,6 @@ GameObject:
   - component: {fileID: 72193924}
   - component: {fileID: 72193923}
   - component: {fileID: 72193922}
-  - component: {fileID: 72193921}
   m_Layer: 0
   m_Name: Gate3
   m_TagString: Checkpoint
@@ -132,18 +215,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &72193921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 72193920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 2
 --- !u!23 &72193922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -313,6 +384,7 @@ MonoBehaviour:
   currentLap: 0
   startPos: {x: 0, y: 0, z: 0}
   lap: 0
+  firstCheck: {fileID: 1664806106}
   checkpoints: []
 --- !u!1 &206548601
 GameObject:
@@ -390,7 +462,6 @@ GameObject:
   - component: {fileID: 267298238}
   - component: {fileID: 267298237}
   - component: {fileID: 267298236}
-  - component: {fileID: 267298235}
   m_Layer: 0
   m_Name: Gate4
   m_TagString: Checkpoint
@@ -398,18 +469,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &267298235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 267298234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 3
 --- !u!23 &267298236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -487,7 +546,6 @@ GameObject:
   - component: {fileID: 449824543}
   - component: {fileID: 449824542}
   - component: {fileID: 449824541}
-  - component: {fileID: 449824540}
   m_Layer: 0
   m_Name: Gate2
   m_TagString: Checkpoint
@@ -495,18 +553,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &449824540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 449824539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 4
 --- !u!23 &449824541
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -584,7 +630,6 @@ GameObject:
   - component: {fileID: 606922076}
   - component: {fileID: 606922075}
   - component: {fileID: 606922074}
-  - component: {fileID: 606922073}
   m_Layer: 0
   m_Name: Gate2 (1)
   m_TagString: Checkpoint
@@ -592,18 +637,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &606922073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 606922072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 4
 --- !u!23 &606922074
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -670,6 +703,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -69.033005, z: 0}
+--- !u!1 &897261338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 897261343}
+  - component: {fileID: 897261342}
+  - component: {fileID: 897261341}
+  - component: {fileID: 897261340}
+  m_Layer: 0
+  m_Name: Gate2 (4)
+  m_TagString: Checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &897261340
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 897261338}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &897261341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 897261338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &897261342
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 897261338}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &897261343
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 897261338}
+  m_LocalRotation: {x: -0, y: -0.3777633, z: -0, w: 0.92590225}
+  m_LocalPosition: {x: 10.58, y: 0.86, z: -1.8}
+  m_LocalScale: {x: 0.2723607, y: 1, z: 4.189758}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: -44.390003, z: 0}
 --- !u!1 &910224531
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +798,6 @@ GameObject:
   - component: {fileID: 910224535}
   - component: {fileID: 910224534}
   - component: {fileID: 910224533}
-  - component: {fileID: 910224532}
   m_Layer: 0
   m_Name: Gate2 (3)
   m_TagString: Checkpoint
@@ -689,18 +805,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &910224532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 910224531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 4
 --- !u!23 &910224533
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -766,6 +870,90 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: -44.390003, z: 0}
+--- !u!1 &995442761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 995442765}
+  - component: {fileID: 995442764}
+  - component: {fileID: 995442763}
+  - component: {fileID: 995442762}
+  m_Layer: 0
+  m_Name: Gate2 (6)
+  m_TagString: Checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &995442762
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995442761}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &995442763
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995442761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &995442764
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995442761}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &995442765
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995442761}
+  m_LocalRotation: {x: -0, y: -0.3777633, z: -0, w: 0.92590225}
+  m_LocalPosition: {x: 13.45, y: 0.86, z: 6.94}
+  m_LocalScale: {x: 0.2723607, y: 1, z: 4.189758}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -44.390003, z: 0}
 --- !u!1 &1090870875
 GameObject:
@@ -879,6 +1067,7 @@ GameObject:
   - component: {fileID: 1097965279}
   - component: {fileID: 1097965284}
   - component: {fileID: 1097965285}
+  - component: {fileID: 1097965278}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -886,6 +1075,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1097965278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097965277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca49e3128a558704c84d05c2ccdcde4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnLoc: {x: 0, y: 0, z: 0}
+  respawnRot: {x: 0, y: 0, z: 0, w: 0}
+  cam: {fileID: 0}
 --- !u!114 &1097965279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,7 +1101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cPassed: 0
-  reefref: {fileID: 74830960}
+  currentPos: {x: 0, y: 0, z: 0}
+  currentRot: {x: 0, y: 0, z: 0, w: 0}
+  listHolder: {fileID: 74830960}
 --- !u!23 &1097965280
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1004,7 +1209,6 @@ GameObject:
   - component: {fileID: 1411362236}
   - component: {fileID: 1411362235}
   - component: {fileID: 1411362234}
-  - component: {fileID: 1411362233}
   m_Layer: 0
   m_Name: Gate5
   m_TagString: Checkpoint
@@ -1012,18 +1216,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1411362233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1411362232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 1
 --- !u!23 &1411362234
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1101,7 +1293,6 @@ GameObject:
   - component: {fileID: 1664806110}
   - component: {fileID: 1664806109}
   - component: {fileID: 1664806108}
-  - component: {fileID: 1664806107}
   m_Layer: 0
   m_Name: Gate0
   m_TagString: Checkpoint
@@ -1109,18 +1300,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1664806107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1664806106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
 --- !u!23 &1664806108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1198,7 +1377,6 @@ GameObject:
   - component: {fileID: 2087792855}
   - component: {fileID: 2087792854}
   - component: {fileID: 2087792853}
-  - component: {fileID: 2087792852}
   m_Layer: 0
   m_Name: Gate2 (2)
   m_TagString: Checkpoint
@@ -1206,18 +1384,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2087792852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2087792851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f31e5de73b85ef4ea347dae24cb5c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 4
 --- !u!23 &2087792853
 MeshRenderer:
   m_ObjectHideFlags: 0
