@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 798424733}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.23065607, g: 0.41258097, b: 0.7796844, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4385,7 +4385,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 757.18
+      value: 762.41
       objectReference: {fileID: 0}
     - target: {fileID: 4801371526474624, guid: d20848ed4ab41744c8a22d589139c564, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6245,13 +6245,12 @@ Transform:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 95425292056316438, guid: 1d3c229c5944f7349a76b8d42a7ddaf2,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634622074}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 474e7f2dfa31aa046adc109e34ace733, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c5573804156ecf240a748071141f4d09, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6895,13 +6894,12 @@ Transform:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 95973257790616778, guid: 1d3c229c5944f7349a76b8d42a7ddaf2,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1893592750}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 20423806af7f4574d867a53e4a04596b, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9bf5e4d8190a90c4a8740319b334a813, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
