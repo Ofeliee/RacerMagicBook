@@ -6,9 +6,10 @@ public class CheckList : MonoBehaviour {
 
     public int nrOfCheckpoints = 0;
     public int currentCheckpoint = 0;
-    public int currentLap;
     public Vector3 startPos;
-    public int lap;
+    public int currentLap;
+    public int nrOfLaps;
+    public int[] LapNrArr;
     private GameObject[] arr;
 	public GameObject firstCheck;
     public List<GameObject> checkpoints = new List<GameObject>();
@@ -20,7 +21,8 @@ public class CheckList : MonoBehaviour {
         // Player start position
         startPos = transform.position;
         currentCheckpoint = 0;
-        currentLap = 0;
+        nrOfLaps = 3;
+        currentLap = 1;
 
         // Find all checkpoint gameobjects, placed in arr and then over to List.
         arr = GameObject.FindGameObjectsWithTag("Checkpoint");
@@ -50,6 +52,8 @@ public class CheckList : MonoBehaviour {
 		{
 			Debug.Log (checkpoints [i]);
 		}
+
+        LapCheckpoint();
     }
 	
 	// Update is called once per frame
@@ -87,4 +91,28 @@ public class CheckList : MonoBehaviour {
 			}
 		}
 	}
+
+    void LapCheckpoint()
+    {
+        int temp;
+        int temp2;
+
+        temp = nrOfCheckpoints / nrOfLaps;
+        print (temp);
+        temp2 = nrOfLaps - 1;
+
+        LapNrArr = new int [temp2];
+
+        int next = 0;
+
+        for(int i = 0; i < temp2; i++)
+        {
+            LapNrArr[i] = (next + temp);
+
+            next += temp;
+
+            print(LapNrArr[i]);
+        }
+
+    }
 }

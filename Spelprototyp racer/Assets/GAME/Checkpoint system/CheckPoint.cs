@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour {
 
-    public int cPassed = 0;
+    public int cPassed = 0; 
     public Vector3 currentPos;
     public Quaternion currentRot;
     public GameObject listHolder;
@@ -24,6 +24,15 @@ public class CheckPoint : MonoBehaviour {
 					GetLocation (other);
 					cPassed += 1;
 					print ("HIT");
+
+                    for(int i = 0; i < (listHolder.GetComponent<CheckList>().nrOfLaps - 1); i++)
+                    {
+                        if(cPassed == listHolder.GetComponent<CheckList>().LapNrArr[i])
+                        {
+                            listHolder.GetComponent<CheckList>().currentLap += 1; 
+                            Debug.Log("A NEW LAP!");
+                        }
+                    }
 				}
 			}
         }
