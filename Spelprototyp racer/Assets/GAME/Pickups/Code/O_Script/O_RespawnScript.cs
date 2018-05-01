@@ -8,6 +8,7 @@ public class O_RespawnScript : MonoBehaviour {
 	public Quaternion respawnRot;
 	public GameObject cam;
 	bool respawned = false;
+	private bool checkP= false;
 	// Use this for initialization
 	void Start () 
 	{
@@ -23,6 +24,10 @@ public class O_RespawnScript : MonoBehaviour {
 		gameObject.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		gameObject.GetComponent<Movement> ().thrustForce = 20;
 		gameObject.GetComponent<Transform>().SetPositionAndRotation(respawnLoc, respawnRot);
+		if (checkP == true) 
+		{
+			gameObject.GetComponent<Transform>().Rotate(0f,-90f,0f);
+		}
 		gameObject.GetComponent<sCollisionScript> ().hitCount = 0;
 		GetComponentInChildren<MeshRenderer> ().material = gameObject.GetComponent<sCollisionScript> ().normalMat;
 		gameObject.GetComponent<StockpileSpdPU> ().Reset ();
@@ -32,6 +37,8 @@ public class O_RespawnScript : MonoBehaviour {
 	public void checkChange(Vector3 loc, Quaternion rot)
 	{
 		respawnLoc = loc;
+		respawnRot = rot;
+		checkP = true;
 	}
 }
 
