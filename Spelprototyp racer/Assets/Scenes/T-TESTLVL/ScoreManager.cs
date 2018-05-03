@@ -11,20 +11,20 @@ public class ScoreManager : MonoBehaviour {
     //This structure "dictionary in dictionary" enables us to write stuff like
     //"userScores["SocioBlade"]["Laps"] = 2;"
     //"userScores["SocioBlade"]["Time"] = 12034;"
-    Dictionary<string, Dictionary<string, int>> userScores;
+    Dictionary<string, Dictionary<string, float>> userScores;
 
     int changeCounter = 0;
 
     void Start()
     {
-        SetScore("SocioBlade", "Laps", 0);
-        SetScore("SocioBlade", "Time", 123345);
+        SetScore("SocioBlade", "Laps", 0.0f);
+        SetScore("SocioBlade", "Time", 0.0f);
 
         SetScore("Odralix", "Laps", 3);
-        SetScore("Odralix", "Time", 154300);
+        SetScore("Odralix", "Time", 31.52f);
 
         SetScore("Ofelie", "Laps", 1);
-        SetScore("Ofelie", "Time", 093245);
+        SetScore("Ofelie", "Time", 21.0f);
 
         Debug.Log(GetScore("SocioBlade", "Laps"));
     }
@@ -34,11 +34,13 @@ public class ScoreManager : MonoBehaviour {
         if (userScores != null)
             return;
 
-        userScores = new Dictionary<string, Dictionary<string, int>>();
+        userScores = new Dictionary<string, Dictionary<string, float>>();
     }
 
-    public int GetScore(string username, string scoreType)
+    public float GetScore(string username, string scoreType)
     {
+        //PlayerPrefs.SetFloat("Time", 5.5f);
+        float time = PlayerPrefs.GetFloat("Time");
         Init();
         if(userScores.ContainsKey(username) == false)
         {
@@ -52,7 +54,7 @@ public class ScoreManager : MonoBehaviour {
         return userScores[username][scoreType];
     }
 
-    public void SetScore(string username, string scoreType, int value)
+    public void SetScore(string username, string scoreType, float value)
     {
         Init();
 
@@ -60,15 +62,15 @@ public class ScoreManager : MonoBehaviour {
 
         if(userScores.ContainsKey(username) == false)
         {
-            userScores[username] = new Dictionary<string, int>();
+            userScores[username] = new Dictionary<string, float>();
         }
         userScores[username][scoreType] = value;
     }
 
-    public void ChangeScore(string username, string scoreType, int amount)
+    public void ChangeScore(string username, string scoreType, float amount)
     {
         Init();
-        int currScore = GetScore(username, scoreType);
+        float currScore = GetScore(username, scoreType);
         SetScore(username, scoreType, currScore + amount);
     }
 
@@ -87,6 +89,11 @@ public class ScoreManager : MonoBehaviour {
     public void _DEBUG_ADD_LAPS_SOCIOBLADE()
     {
         ChangeScore("SocioBlade", "Laps", 1);
+    }
+
+    public void _DEBUG_ADD_TIME()
+    {
+        ChangeScore("SocioBlade", "Time", 2.34f);
     }
 
     public int GetChangeCounter()
