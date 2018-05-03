@@ -406,7 +406,9 @@ MonoBehaviour:
   hitCount: 0
   newMaterialref: {fileID: 2100000, guid: 5181dc1d3a92244449d11e8e7beed476, type: 2}
   sMaterialref: {fileID: 2100000, guid: ca401a5f7fb9b0b48ab585646358c7ce, type: 2}
+  normalMat: {fileID: 0}
   refRend: {fileID: 23755250967332978}
+  respawning: 0
   count: 4
 --- !u!114 &114980366097787896
 MonoBehaviour:
