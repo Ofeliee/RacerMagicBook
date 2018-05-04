@@ -38,16 +38,11 @@ public class GameOverManager : MonoBehaviour {
             anim.SetTrigger("ShadowCatch");
         }
 
-        if (playerCube.GetComponent<sCollisionScript>().hitCount >= 3)
-        {
-            anim.SetTrigger("GameOverDeath");
-            restartTimer += Time.deltaTime;
-
-            if (restartTimer >= restartDelay)
-            {
-                Destroy(playerCube);
-                SceneManager.LoadScene("MainMenu");
-            }
-        }
+        
 	}
+
+    public void killFadeFunc()
+    {
+            anim.SetTrigger("GameOverDeath");
+    }
 }

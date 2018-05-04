@@ -10,6 +10,9 @@ public class sCollisionScript : MonoBehaviour
     public Material sMaterialref;
 	public Material normalMat;
     public Renderer refRend;
+    public GameObject fadeMan;
+    public float restartDelay = 5f;
+    float restartTimer;
 
 	public bool respawning = false;
 
@@ -52,7 +55,9 @@ public class sCollisionScript : MonoBehaviour
 				else if (hitCount == 3) 
 				{
 					respawning = true;
-					gameObject.GetComponent<O_RespawnScript> ().Respawn ();
+                    fadeMan.GetComponent<GameOverManager>().killFadeFunc();
+                 //   if (restartTimer >= restartDelay)
+                    gameObject.GetComponent<O_RespawnScript> ().Respawn ();
 					//Destroy (gameObject);
 				}
 				timer = count;
