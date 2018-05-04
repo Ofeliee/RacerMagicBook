@@ -7,6 +7,7 @@ public class GameOverManager : MonoBehaviour {
     public GameObject playerCube;
     public float restartDelay = 5f;
     public float shadowCatchTime = 20f;
+    public GameObject collision;
 
     Animator anim;
     float restartTimer;
@@ -43,6 +44,7 @@ public class GameOverManager : MonoBehaviour {
 
     public void killFadeFunc()
     {
+
             anim.SetTrigger("GameOverDeath");
     }
 }

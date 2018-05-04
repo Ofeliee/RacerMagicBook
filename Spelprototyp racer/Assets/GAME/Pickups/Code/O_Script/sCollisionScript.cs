@@ -11,8 +11,9 @@ public class sCollisionScript : MonoBehaviour
 	public Material normalMat;
     public Renderer refRend;
     public GameObject fadeMan;
-    public float restartDelay = 5f;
+    public float restartDelay = 1.0f;
     float restartTimer;
+    public int callAnim = 0;
 
 	public bool respawning = false;
 
@@ -27,6 +28,7 @@ public class sCollisionScript : MonoBehaviour
 		firstCol = true;
 		inv = refRend.material.color;
 	}
+
     private void OnCollisionEnter(Collision collisionInfo)
     {
 		if (firstCol == true) 
@@ -52,14 +54,6 @@ public class sCollisionScript : MonoBehaviour
 				{
 					refRend.material = sMaterialref;
 				} 
-				else if (hitCount == 3) 
-				{
-					respawning = true;
-                    fadeMan.GetComponent<GameOverManager>().killFadeFunc();
-                 //   if (restartTimer >= restartDelay)
-                    gameObject.GetComponent<O_RespawnScript> ().Respawn ();
-					//Destroy (gameObject);
-				}
 				timer = count;
 				inv = refRend.material.color;
 				inv.a = 0.5f;
@@ -73,6 +67,7 @@ public class sCollisionScript : MonoBehaviour
 	void Update()
 	{
 		timer -= Time.deltaTime;
+        
 
 		if (invun ==true && timer < 0.00) 
 		{
@@ -81,8 +76,17 @@ public class sCollisionScript : MonoBehaviour
 			refRend.material.color = inv;
 			invun = false;
 		}
-			
+        if (hitCount == 3)
+        {
+            respawning = true;
+            fadeMan.GetComponent<GameOverManager>().killFadeFunc();
+            restartTimer += Time.deltaTime;
+            if (restartTimer >= restartDelay)
+                gameObject.GetComponent<O_RespawnScript>().Respawn();
+            //Destroy (gameObject);
+        }
 
-	}
+
+    }
 
 }
