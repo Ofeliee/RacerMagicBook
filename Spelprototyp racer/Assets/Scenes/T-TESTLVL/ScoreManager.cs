@@ -17,14 +17,14 @@ public class ScoreManager : MonoBehaviour {
 
     void Start()
     {
-        SetScore("SocioBlade", "Laps", 0.0f);
+        SetScore("SocioBlade", "Laps", 0);
         SetScore("SocioBlade", "Time", 0.0f);
 
-        SetScore("Odralix", "Laps", 3);
-        SetScore("Odralix", "Time", 31.52f);
+        SetScore("Odralix", "Laps", 2);
+        SetScore("Odralix", "Time", 0.0f);
 
         SetScore("Ofelie", "Laps", 1);
-        SetScore("Ofelie", "Time", 21.0f);
+        SetScore("Ofelie", "Time", 0.0f);
 
         Debug.Log(GetScore("SocioBlade", "Laps"));
     }
@@ -39,8 +39,6 @@ public class ScoreManager : MonoBehaviour {
 
     public float GetScore(string username, string scoreType)
     {
-        //PlayerPrefs.SetFloat("Time", 5.5f);
-        float time = PlayerPrefs.GetFloat("Time");
         Init();
         if(userScores.ContainsKey(username) == false)
         {
@@ -93,7 +91,7 @@ public class ScoreManager : MonoBehaviour {
 
     public void _DEBUG_ADD_TIME()
     {
-        ChangeScore("SocioBlade", "Time", 2.34f);
+        ChangeScore("SocioBlade", "Time", 2.43f);
     }
 
     public int GetChangeCounter()
