@@ -6,7 +6,7 @@ using UnityEditor;
 [CustomEditor(typeof(NrOfCheckpoints))]
 public class CheckpointWindow : Editor {
 
-    private int CheckNr = 0;
+    public int CheckNr = 0;
     CheckList tries;
     public List<GameObject> checkpoints2 = new List<GameObject>();
 
@@ -30,8 +30,8 @@ public class CheckpointWindow : Editor {
         if ( GUILayout.Button("GIZMO") )
         {
             Debug.Log("Gizmo");
-         
-                OnDrawGizmos();
+            GameObject.Find("Plane").GetComponent<CheckList>().CallGiz();
+
         }    
     }
 
@@ -65,18 +65,7 @@ public class CheckpointWindow : Editor {
     void CreateList()
     {
         Debug.Log("HEJ!");
-        GameObject.Find("Plane").GetComponent<CheckList>().CreateTheList();
-    }
-
-
-    private void OnDrawGizmos()
-    {
-        for (int i = 0; i < CheckNr-1; ++i)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(checkpoints2[i].transform.position, 1);
-            Gizmos.DrawLine(checkpoints2[i].transform.position, checkpoints2[i+1].transform.position);
-        }
+        checkpoints2 = GameObject.Find("Plane").GetComponent<CheckList>().CreateTheList();
     }
 
 }

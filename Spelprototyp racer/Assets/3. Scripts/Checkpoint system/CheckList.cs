@@ -17,6 +17,8 @@ public class CheckList : MonoBehaviour {
     // Use this for initialization
     public List<GameObject> CreateTheList () 
 	{
+        checkpoints = new List<GameObject>();
+
         Debug.Log("DÅ! :3");
         firstCheck = GameObject.Find("Checkpoint0");
 
@@ -91,6 +93,11 @@ public class CheckList : MonoBehaviour {
 			}
 		}
 	}
+
+    public void CallGiz()
+    {
+        gameObject.GetComponent<GizmosDraw>().assignChecks(checkpoints, nrOfCheckpoints);
+    }
 
     void LapCheckpoint()
     {
